@@ -21,7 +21,7 @@ client = mqtt.Client(client_id="jinx/subscriber")
 client.on_connect = on_connect
 client.on_message = on_message
 
-# Client connection
+# Client connection, syntax: [host, port, alive-timer]
 client.connect("test.mosquitto.org", 1883, 60)
 
 # loop_forever is a blocking call, and makes it "impossible" to do other tasks in this program
